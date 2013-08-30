@@ -1,0 +1,1686 @@
+********************************************************************************
+MEME - Motif discovery tool
+********************************************************************************
+MEME version 4.6.0 (Release date: Thu Jan 20 14:06:48 PST 2011)
+
+For further information on how to interpret these results or to get
+a copy of the MEME software please access http://meme.nbcr.net.
+
+This file may be used as input to the MAST algorithm for searching
+sequence databases for matches to groups of motifs.  MAST is available
+for interactive use and downloading at http://meme.nbcr.net.
+********************************************************************************
+
+
+********************************************************************************
+REFERENCE
+********************************************************************************
+If you use this program in your research, please cite:
+
+Timothy L. Bailey and Charles Elkan,
+"Fitting a mixture model by expectation maximization to discover
+motifs in biopolymers", Proceedings of the Second International
+Conference on Intelligent Systems for Molecular Biology, pp. 28-36,
+AAAI Press, Menlo Park, California, 1994.
+********************************************************************************
+
+
+********************************************************************************
+TRAINING SET
+********************************************************************************
+DATAFILE= ../data/piRNA.BIP.150nt.all.fa
+ALPHABET= ACGT
+Sequence name            Weight Length  Sequence name            Weight Length  
+-------------            ------ ------  -------------            ------ ------  
+BIP_1                    1.0000    300  BIP_2                    1.0000    300  
+BIP_3                    1.0000    300  BIP_53                   1.0000    300  
+BIP_54                   1.0000    300  BIP_55                   1.0000    300  
+BIP_56                   1.0000    300  BIP_4                    1.0000    300  
+BIP_57                   1.0000    300  BIP_5                    1.0000    300  
+BIP_58                   1.0000    300  BIP_6                    1.0000    300  
+BIP_59                   1.0000    300  BIP_60                   1.0000    300  
+BIP_7                    1.0000    300  BIP_8                    1.0000    300  
+BIP_9                    1.0000    300  BIP_10                   1.0000    300  
+BIP_11                   1.0000    300  BIP_12                   1.0000    300  
+BIP_13                   1.0000    300  BIP_61                   1.0000    300  
+BIP_62                   1.0000    300  BIP_14                   1.0000    300  
+BIP_15                   1.0000    300  BIP_63                   1.0000    300  
+BIP_64                   1.0000    300  BIP_65                   1.0000    300  
+BIP_66                   1.0000    300  BIP_16                   1.0000    300  
+BIP_17                   1.0000    300  BIP_18                   1.0000    300  
+BIP_67                   1.0000    300  BIP_68                   1.0000    300  
+BIP_19                   1.0000    300  BIP_69                   1.0000    300  
+BIP_70                   1.0000    300  BIP_20                   1.0000    300  
+BIP_21                   1.0000    300  BIP_22                   1.0000    300  
+BIP_23                   1.0000    300  BIP_71                   1.0000    300  
+BIP_24                   1.0000    300  BIP_25                   1.0000    300  
+BIP_72                   1.0000    300  BIP_26                   1.0000    300  
+BIP_27                   1.0000    300  BIP_73                   1.0000    300  
+BIP_74                   1.0000    300  BIP_28                   1.0000    300  
+BIP_29                   1.0000    300  BIP_30                   1.0000    300  
+BIP_75                   1.0000    300  BIP_31                   1.0000    300  
+BIP_76                   1.0000    300  BIP_32                   1.0000    300  
+BIP_77                   1.0000    300  BIP_33                   1.0000    300  
+BIP_78                   1.0000    300  BIP_34                   1.0000    300  
+BIP_79                   1.0000    300  BIP_80                   1.0000    300  
+BIP_35                   1.0000    300  BIP_36                   1.0000    300  
+BIP_37                   1.0000    300  BIP_38                   1.0000    300  
+BIP_39                   1.0000    300  BIP_81                   1.0000    300  
+BIP_40                   1.0000    300  BIP_82                   1.0000    300  
+BIP_83                   1.0000    300  BIP_41                   1.0000    300  
+BIP_42                   1.0000    300  BIP_84                   1.0000    300  
+BIP_85                   1.0000    300  BIP_86                   1.0000    300  
+BIP_87                   1.0000    300  BIP_88                   1.0000    300  
+BIP_89                   1.0000    300  BIP_90                   1.0000    300  
+BIP_91                   1.0000    300  BIP_43                   1.0000    300  
+BIP_92                   1.0000    300  BIP_93                   1.0000    300  
+BIP_94                   1.0000    300  BIP_95                   1.0000    300  
+BIP_44                   1.0000    300  BIP_45                   1.0000    300  
+BIP_46                   1.0000    300  BIP_47                   1.0000    300  
+BIP_96                   1.0000    300  BIP_97                   1.0000    300  
+BIP_98                   1.0000    300  BIP_99                   1.0000    300  
+BIP_48                   1.0000    300  BIP_49                   1.0000    300  
+BIP_50                   1.0000    300  BIP_100                  1.0000    300  
+BIP_51                   1.0000    300  BIP_52                   1.0000    300  
+BIP_101                  1.0000    300  BIP_102                  1.0000    300  
+********************************************************************************
+
+********************************************************************************
+COMMAND LINE SUMMARY
+********************************************************************************
+This information can also be useful in the event you wish to report a
+problem with the MEME software.
+
+command: meme -oc meme_piRNA.BIP.150nt.all.fa -w 8 -nmotifs 10 -dna -p 8 -maxsize 200000 ../data/piRNA.BIP.150nt.all.fa 
+
+model:  mod=         zoops    nmotifs=        10    evt=           inf
+object function=  E-value of product of p-values
+width:  minw=            8    maxw=            8    minic=        0.00
+width:  wg=             11    ws=              1    endgaps=       yes
+nsites: minsites=        2    maxsites=      102    wnsites=       0.8
+theta:  prob=            1    spmap=         uni    spfuzz=        0.5
+global: substring=     yes    branching=      no    wbranch=        no
+em:     prior=   dirichlet    b=            0.01    maxiter=        50
+        distance=    1e-05
+data:   n=           30600    N=             102
+strands: +
+sample: seed=            0    seqfrac=         1
+Letter frequencies in dataset:
+A 0.205 C 0.302 G 0.294 T 0.199 
+Background letter frequencies (from dataset with add-one prior applied):
+A 0.205 C 0.302 G 0.294 T 0.199 
+********************************************************************************
+
+
+********************************************************************************
+MOTIF  1	width =    8   sites =  23   llr = 222   E-value = 1.4e-002
+********************************************************************************
+--------------------------------------------------------------------------------
+	Motif 1 Description
+--------------------------------------------------------------------------------
+Simplified        A  aa:1:1:8
+pos.-specific     C  ::a::7a2
+probability       G  ::::a:::
+matrix            T  :::9:2::
+
+         bits    2.3 **      
+                 2.1 **      
+                 1.9 ** **   
+                 1.6 ***** * 
+Relative         1.4 ***** **
+Entropy          1.2 ***** **
+(13.9 bits)      0.9 ***** **
+                 0.7 ********
+                 0.5 ********
+                 0.2 ********
+                 0.0 --------
+
+Multilevel           AACTGCCA
+consensus                   C
+sequence                     
+                             
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif 1 sites sorted by position p-value
+--------------------------------------------------------------------------------
+Sequence name             Start   P-value              Site
+-------------             ----- ---------            --------
+BIP_51                      159  1.39e-05 CAACGTTCCC AACTGCCA ACGGCAGCCC
+BIP_92                      166  1.39e-05 AACTGGAAGC AACTGCCA CTGGTCCAGG
+BIP_88                      130  1.39e-05 TCAGCTTGCA AACTGCCA GTATAGAATC
+BIP_39                       45  1.39e-05 ATAGAGTTCC AACTGCCA GGCCCCGCCT
+BIP_38                      161  1.39e-05 ATAGAGTTCC AACTGCCA GGCCCCGCCT
+BIP_27                      208  1.39e-05 CTAGCCTTGT AACTGCCA CCCTGTTAGC
+BIP_72                      204  1.39e-05 TGCCCCCAGC AACTGCCA TTCAGTGCCA
+BIP_70                       65  1.39e-05 TCTGGGCACC AACTGCCA GGCTCTGGGT
+BIP_67                       75  1.39e-05 GCCAACCACT AACTGCCA ACTGTTAACT
+BIP_59                      145  1.39e-05 AGTTACCACT AACTGCCA ATAGCTCTTC
+BIP_101                      86  2.30e-05 AACTTCTGCC AACTGTCA CCATGGGACA
+BIP_80                      119  2.30e-05 TTATTTATGC AACTGTCA CCTGGGCAGT
+BIP_74                      187  2.30e-05 GGACAGTTGT AACTGTCA CCGGGTGTGG
+BIP_64                      154  2.30e-05 TCCAAGAGCC AACTGTCA CTGAAGAGTA
+BIP_94                      124  4.35e-05 CAGTTTTTTC AACTGCCC TTGGAATGTT
+BIP_43                       31  4.35e-05 TCCGCCGCGG AACTGCCC TCTGGAGATT
+BIP_79                      156  4.35e-05 CATTCCGACC AACTGCCC AGGTGACAGT
+BIP_34                      157  4.35e-05 ATTCTACCCT AACTGCCC AAGACTATCT
+BIP_63                      248  4.35e-05 CCCCTGAGTT AACTGCCC TTGCTCCTGT
+BIP_98                      218  5.29e-05 ACAGCACCTT AACTGACA AGAGACAGTT
+BIP_83                      146  5.29e-05 CTTTAACGCC AACTGACA AATCCCCGTT
+BIP_69                      142  6.72e-05 ACAAGTTCCC AACAGCCA CTGGGTGTTT
+BIP_19                      142  6.72e-05 ACAAGTTCCC AACAGCCA CTGGGTGTTT
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif 1 block diagrams
+--------------------------------------------------------------------------------
+SEQUENCE NAME            POSITION P-VALUE  MOTIF DIAGRAM
+-------------            ----------------  -------------
+BIP_51                            1.4e-05  158_[+1]_134
+BIP_92                            1.4e-05  165_[+1]_127
+BIP_88                            1.4e-05  129_[+1]_163
+BIP_39                            1.4e-05  44_[+1]_248
+BIP_38                            1.4e-05  160_[+1]_132
+BIP_27                            1.4e-05  207_[+1]_85
+BIP_72                            1.4e-05  203_[+1]_89
+BIP_70                            1.4e-05  64_[+1]_228
+BIP_67                            1.4e-05  74_[+1]_218
+BIP_59                            1.4e-05  144_[+1]_148
+BIP_101                           2.3e-05  85_[+1]_207
+BIP_80                            2.3e-05  118_[+1]_174
+BIP_74                            2.3e-05  186_[+1]_106
+BIP_64                            2.3e-05  153_[+1]_139
+BIP_94                            4.3e-05  123_[+1]_169
+BIP_43                            4.3e-05  30_[+1]_262
+BIP_79                            4.3e-05  155_[+1]_137
+BIP_34                            4.3e-05  156_[+1]_136
+BIP_63                            4.3e-05  247_[+1]_45
+BIP_98                            5.3e-05  217_[+1]_75
+BIP_83                            5.3e-05  145_[+1]_147
+BIP_69                            6.7e-05  141_[+1]_151
+BIP_19                            6.7e-05  141_[+1]_151
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif 1 in BLOCKS format
+--------------------------------------------------------------------------------
+BL   MOTIF 1 width=8 seqs=23
+BIP_51                   (  159) AACTGCCA  1 
+BIP_92                   (  166) AACTGCCA  1 
+BIP_88                   (  130) AACTGCCA  1 
+BIP_39                   (   45) AACTGCCA  1 
+BIP_38                   (  161) AACTGCCA  1 
+BIP_27                   (  208) AACTGCCA  1 
+BIP_72                   (  204) AACTGCCA  1 
+BIP_70                   (   65) AACTGCCA  1 
+BIP_67                   (   75) AACTGCCA  1 
+BIP_59                   (  145) AACTGCCA  1 
+BIP_101                  (   86) AACTGTCA  1 
+BIP_80                   (  119) AACTGTCA  1 
+BIP_74                   (  187) AACTGTCA  1 
+BIP_64                   (  154) AACTGTCA  1 
+BIP_94                   (  124) AACTGCCC  1 
+BIP_43                   (   31) AACTGCCC  1 
+BIP_79                   (  156) AACTGCCC  1 
+BIP_34                   (  157) AACTGCCC  1 
+BIP_63                   (  248) AACTGCCC  1 
+BIP_98                   (  218) AACTGACA  1 
+BIP_83                   (  146) AACTGACA  1 
+BIP_69                   (  142) AACAGCCA  1 
+BIP_19                   (  142) AACAGCCA  1 
+//
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif 1 position-specific scoring matrix
+--------------------------------------------------------------------------------
+log-odds matrix: alength= 4 w= 8 n= 29886 bayes= 11.4072 E= 1.4e-002 
+   228  -1117  -1117  -1117 
+   228  -1117  -1117  -1117 
+ -1117    173  -1117  -1117 
+  -124  -1117  -1117    220 
+ -1117  -1117    177  -1117 
+  -124    129  -1117    -19 
+ -1117    173  -1117  -1117 
+   193    -47  -1117  -1117 
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif 1 position-specific probability matrix
+--------------------------------------------------------------------------------
+letter-probability matrix: alength= 4 w= 8 nsites= 23 E= 1.4e-002 
+ 1.000000  0.000000  0.000000  0.000000 
+ 1.000000  0.000000  0.000000  0.000000 
+ 0.000000  1.000000  0.000000  0.000000 
+ 0.086957  0.000000  0.000000  0.913043 
+ 0.000000  0.000000  1.000000  0.000000 
+ 0.086957  0.739130  0.000000  0.173913 
+ 0.000000  1.000000  0.000000  0.000000 
+ 0.782609  0.217391  0.000000  0.000000 
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif 1 regular expression
+--------------------------------------------------------------------------------
+AACTGCC[AC]
+--------------------------------------------------------------------------------
+
+
+
+
+Time 10.08 secs.
+
+********************************************************************************
+
+
+********************************************************************************
+MOTIF  2	width =    8   sites =  25   llr = 231   E-value = 8.7e+000
+********************************************************************************
+--------------------------------------------------------------------------------
+	Motif 2 Description
+--------------------------------------------------------------------------------
+Simplified        A  23:a:::4
+pos.-specific     C  ::a:::::
+probability       G  86::a::6
+matrix            T  :1:::aa:
+
+         bits    2.3    * ** 
+                 2.1    * ** 
+                 1.9    **** 
+                 1.6   ***** 
+Relative         1.4   ***** 
+Entropy          1.2 * ***** 
+(13.3 bits)      0.9 * ******
+                 0.7 ********
+                 0.5 ********
+                 0.2 ********
+                 0.0 --------
+
+Multilevel           GGCAGTTG
+consensus            AA     A
+sequence                     
+                             
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif 2 sites sorted by position p-value
+--------------------------------------------------------------------------------
+Sequence name             Start   P-value              Site
+-------------             ----- ---------            --------
+BIP_95                      150  1.28e-05 ACAATCCAGA GGCAGTTA GAAGGTGGCC
+BIP_91                      143  1.28e-05 CCCAGCTGCC GGCAGTTA CACAACCTAA
+BIP_88                       99  1.28e-05 CCACTGGCAT GGCAGTTA TAACTGGCTT
+BIP_84                      173  1.28e-05 AGTGGCCACT GGCAGTTA GTTCTGTGGT
+BIP_75                      233  1.28e-05 CAACCCCCGT GGCAGTTA CAGACTGTTG
+BIP_65                      189  1.28e-05 ATCCTTCATT GGCAGTTA GTAAGTTTAG
+BIP_63                      187  1.28e-05 ACGATCTAAC GGCAGTTA CTGTACGTTG
+BIP_93                      154  3.11e-05 ACATTCTGAT GGCAGTTG AAAGTAACAG
+BIP_80                      131  3.11e-05 CTGTCACCTG GGCAGTTG GTCAGAATGT
+BIP_24                      165  3.11e-05 TGCTCCCAGC GGCAGTTG GAAGCGCCCG
+BIP_69                      214  3.11e-05 CGACACTGAG GGCAGTTG AGGAGCAATG
+BIP_19                      214  3.11e-05 CGACACTGAG GGCAGTTG AGGAGCAATG
+BIP_56                       77  3.11e-05 GCCGATGAAT GGCAGTTG GAACACGCGG
+BIP_98                      229  4.00e-05 ACTGACAAGA GACAGTTA ACGCTTGAGA
+BIP_71                      159  4.00e-05 GACGGTTGGA GACAGTTA TGGGCGTGGC
+BIP_79                      168  5.28e-05 CTGCCCAGGT GACAGTTG CATAAATAAT
+BIP_74                      178  5.28e-05 GTCCACTGTG GACAGTTG TAACTGTCAC
+BIP_3                       266  5.28e-05 CCCGTTCGGA GACAGTTG CTGAGGAGGG
+BIP_94                      154  7.44e-05 GAAAATTCTC AGCAGTTG GCACCCTGGT
+BIP_90                       13  7.44e-05 CTTTCAGCTC AGCAGTTG GCCGTTGGGT
+BIP_59                      192  8.07e-05 CCCCACCAGC AACAGTTA ACTGCCTCCA
+BIP_49                      124  8.96e-05 TGACTGACGG AACAGTTG ACGAATCAAC
+BIP_97                      132  8.96e-05 GTAAAGGAGC AACAGTTG CGTCCTCGTG
+BIP_70                       42  9.82e-05 CCAACGGTTG GTCAGTTA GTCGCTCTGG
+BIP_58                      124  1.11e-04 TGTCTCAAAA GTCAGTTG GGCTTGTATG
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif 2 block diagrams
+--------------------------------------------------------------------------------
+SEQUENCE NAME            POSITION P-VALUE  MOTIF DIAGRAM
+-------------            ----------------  -------------
+BIP_95                            1.3e-05  149_[+2]_143
+BIP_91                            1.3e-05  142_[+2]_150
+BIP_88                            1.3e-05  98_[+2]_194
+BIP_84                            1.3e-05  172_[+2]_120
+BIP_75                            1.3e-05  232_[+2]_60
+BIP_65                            1.3e-05  188_[+2]_104
+BIP_63                            1.3e-05  186_[+2]_106
+BIP_93                            3.1e-05  153_[+2]_139
+BIP_80                            3.1e-05  130_[+2]_162
+BIP_24                            3.1e-05  164_[+2]_128
+BIP_69                            3.1e-05  213_[+2]_79
+BIP_19                            3.1e-05  213_[+2]_79
+BIP_56                            3.1e-05  76_[+2]_216
+BIP_98                              4e-05  228_[+2]_64
+BIP_71                              4e-05  158_[+2]_134
+BIP_79                            5.3e-05  167_[+2]_125
+BIP_74                            5.3e-05  177_[+2]_115
+BIP_3                             5.3e-05  265_[+2]_27
+BIP_94                            7.4e-05  153_[+2]_139
+BIP_90                            7.4e-05  12_[+2]_280
+BIP_59                            8.1e-05  191_[+2]_101
+BIP_49                              9e-05  123_[+2]_169
+BIP_97                              9e-05  131_[+2]_161
+BIP_70                            9.8e-05  41_[+2]_251
+BIP_58                            0.00011  123_[+2]_169
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif 2 in BLOCKS format
+--------------------------------------------------------------------------------
+BL   MOTIF 2 width=8 seqs=25
+BIP_95                   (  150) GGCAGTTA  1 
+BIP_91                   (  143) GGCAGTTA  1 
+BIP_88                   (   99) GGCAGTTA  1 
+BIP_84                   (  173) GGCAGTTA  1 
+BIP_75                   (  233) GGCAGTTA  1 
+BIP_65                   (  189) GGCAGTTA  1 
+BIP_63                   (  187) GGCAGTTA  1 
+BIP_93                   (  154) GGCAGTTG  1 
+BIP_80                   (  131) GGCAGTTG  1 
+BIP_24                   (  165) GGCAGTTG  1 
+BIP_69                   (  214) GGCAGTTG  1 
+BIP_19                   (  214) GGCAGTTG  1 
+BIP_56                   (   77) GGCAGTTG  1 
+BIP_98                   (  229) GACAGTTA  1 
+BIP_71                   (  159) GACAGTTA  1 
+BIP_79                   (  168) GACAGTTG  1 
+BIP_74                   (  178) GACAGTTG  1 
+BIP_3                    (  266) GACAGTTG  1 
+BIP_94                   (  154) AGCAGTTG  1 
+BIP_90                   (   13) AGCAGTTG  1 
+BIP_59                   (  192) AACAGTTA  1 
+BIP_49                   (  124) AACAGTTG  1 
+BIP_97                   (  132) AACAGTTG  1 
+BIP_70                   (   42) GTCAGTTA  1 
+BIP_58                   (  124) GTCAGTTG  1 
+//
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif 2 position-specific scoring matrix
+--------------------------------------------------------------------------------
+log-odds matrix: alength= 4 w= 8 n= 29886 bayes= 11.3557 E= 8.7e+000 
+    -4  -1129    144  -1129 
+    64  -1129    103   -131 
+ -1129    173  -1129  -1129 
+   228  -1129  -1129  -1129 
+ -1129  -1129    177  -1129 
+ -1129  -1129  -1129    233 
+ -1129  -1129  -1129    233 
+   110  -1129     93  -1129 
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif 2 position-specific probability matrix
+--------------------------------------------------------------------------------
+letter-probability matrix: alength= 4 w= 8 nsites= 25 E= 8.7e+000 
+ 0.200000  0.000000  0.800000  0.000000 
+ 0.320000  0.000000  0.600000  0.080000 
+ 0.000000  1.000000  0.000000  0.000000 
+ 1.000000  0.000000  0.000000  0.000000 
+ 0.000000  0.000000  1.000000  0.000000 
+ 0.000000  0.000000  0.000000  1.000000 
+ 0.000000  0.000000  0.000000  1.000000 
+ 0.440000  0.000000  0.560000  0.000000 
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif 2 regular expression
+--------------------------------------------------------------------------------
+[GA][GA]CAGTT[GA]
+--------------------------------------------------------------------------------
+
+
+
+
+Time 19.93 secs.
+
+********************************************************************************
+
+
+********************************************************************************
+MOTIF  3	width =    8   sites =  14   llr = 142   E-value = 8.3e+001
+********************************************************************************
+--------------------------------------------------------------------------------
+	Motif 3 Description
+--------------------------------------------------------------------------------
+Simplified        A  9:1:1:::
+pos.-specific     C  ::4::6::
+probability       G  :::::4::
+matrix            T  1a5a9:aa
+
+         bits    2.3  * *  **
+                 2.1  * *  **
+                 1.9 ** ** **
+                 1.6 ** ** **
+Relative         1.4 ** ** **
+Entropy          1.2 ** ** **
+(14.7 bits)      0.9 ** ** **
+                 0.7 ********
+                 0.5 ********
+                 0.2 ********
+                 0.0 --------
+
+Multilevel           ATTTTCTT
+consensus              C  G  
+sequence                     
+                             
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif 3 sites sorted by position p-value
+--------------------------------------------------------------------------------
+Sequence name             Start   P-value              Site
+-------------             ----- ---------            --------
+BIP_63                      219  3.84e-06 GGAGAGAGAC ATTTTCTT CAGTGCTGTA
+BIP_60                      233  3.84e-06 CCGCGCGCCC ATTTTCTT CATCTGCCGC
+BIP_5                       281  3.84e-06 GTTTTGTTGA ATTTTCTT CTACTTTATG
+BIP_12                      204  7.59e-06 CCCCGCCTCC ATTTTGTT CGCGGACGCT
+BIP_56                      221  7.59e-06 GTTTGGGACC ATTTTGTT GATAAGTCTC
+BIP_51                      267  1.34e-05 CTTCTCCACC ATCTTCTT GTCCACCGTG
+BIP_27                      269  1.34e-05 TGGGGTTCGG ATCTTCTT CCAGGTATGA
+BIP_64                       15  1.34e-05 CCTGCTCAAT ATCTTCTT TCTTCTTTGC
+BIP_49                      266  2.31e-05 GCTGGCCGCC ATCTTGTT GTTGATCCGT
+BIP_26                      265  2.31e-05 CTTGATTGTT ATCTTGTT CCTTGAGGGG
+BIP_9                       258  2.31e-05 AGTTCTCGCG ATATTCTT CTCGTAGCCC
+BIP_87                      109  2.69e-05 TCCCTGCTGC ATATTGTT AGCATTTTGT
+BIP_97                      104  3.46e-05 CATGTCTTCC ATTTACTT GGCCTGCAAA
+BIP_76                       22  3.46e-05 TCAGGTCTAG TTTTTCTT GCTCCTTTCG
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif 3 block diagrams
+--------------------------------------------------------------------------------
+SEQUENCE NAME            POSITION P-VALUE  MOTIF DIAGRAM
+-------------            ----------------  -------------
+BIP_63                            3.8e-06  218_[+3]_74
+BIP_60                            3.8e-06  232_[+3]_60
+BIP_5                             3.8e-06  280_[+3]_12
+BIP_12                            7.6e-06  203_[+3]_89
+BIP_56                            7.6e-06  220_[+3]_72
+BIP_51                            1.3e-05  266_[+3]_26
+BIP_27                            1.3e-05  268_[+3]_24
+BIP_64                            1.3e-05  14_[+3]_278
+BIP_49                            2.3e-05  265_[+3]_27
+BIP_26                            2.3e-05  264_[+3]_28
+BIP_9                             2.3e-05  257_[+3]_35
+BIP_87                            2.7e-05  108_[+3]_184
+BIP_97                            3.5e-05  103_[+3]_189
+BIP_76                            3.5e-05  21_[+3]_271
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif 3 in BLOCKS format
+--------------------------------------------------------------------------------
+BL   MOTIF 3 width=8 seqs=14
+BIP_63                   (  219) ATTTTCTT  1 
+BIP_60                   (  233) ATTTTCTT  1 
+BIP_5                    (  281) ATTTTCTT  1 
+BIP_12                   (  204) ATTTTGTT  1 
+BIP_56                   (  221) ATTTTGTT  1 
+BIP_51                   (  267) ATCTTCTT  1 
+BIP_27                   (  269) ATCTTCTT  1 
+BIP_64                   (   15) ATCTTCTT  1 
+BIP_49                   (  266) ATCTTGTT  1 
+BIP_26                   (  265) ATCTTGTT  1 
+BIP_9                    (  258) ATATTCTT  1 
+BIP_87                   (  109) ATATTGTT  1 
+BIP_97                   (  104) ATTTACTT  1 
+BIP_76                   (   22) TTTTTCTT  1 
+//
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif 3 position-specific scoring matrix
+--------------------------------------------------------------------------------
+log-odds matrix: alength= 4 w= 8 n= 29886 bayes= 12.7295 E= 8.3e+001 
+   218  -1045  -1045   -147 
+ -1045  -1045  -1045    233 
+   -52     24  -1045    133 
+ -1045  -1045  -1045    233 
+  -152  -1045  -1045    222 
+ -1045    109     28  -1045 
+ -1045  -1045  -1045    233 
+ -1045  -1045  -1045    233 
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif 3 position-specific probability matrix
+--------------------------------------------------------------------------------
+letter-probability matrix: alength= 4 w= 8 nsites= 14 E= 8.3e+001 
+ 0.928571  0.000000  0.000000  0.071429 
+ 0.000000  0.000000  0.000000  1.000000 
+ 0.142857  0.357143  0.000000  0.500000 
+ 0.000000  0.000000  0.000000  1.000000 
+ 0.071429  0.000000  0.000000  0.928571 
+ 0.000000  0.642857  0.357143  0.000000 
+ 0.000000  0.000000  0.000000  1.000000 
+ 0.000000  0.000000  0.000000  1.000000 
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif 3 regular expression
+--------------------------------------------------------------------------------
+AT[TC]TT[CG]TT
+--------------------------------------------------------------------------------
+
+
+
+
+Time 29.65 secs.
+
+********************************************************************************
+
+
+********************************************************************************
+MOTIF  4	width =    8   sites =  51   llr = 391   E-value = 3.7e+004
+********************************************************************************
+--------------------------------------------------------------------------------
+	Motif 4 Description
+--------------------------------------------------------------------------------
+Simplified        A  :::3::::
+pos.-specific     C  aaa:a989
+probability       G  :::5::::
+matrix            T  :::2:121
+
+         bits    2.3         
+                 2.1         
+                 1.9         
+                 1.6 **  *   
+Relative         1.4 *** ** *
+Entropy          1.2 *** ****
+(11.1 bits)      0.9 *** ****
+                 0.7 ********
+                 0.5 ********
+                 0.2 ********
+                 0.0 --------
+
+Multilevel           CCCGCCCC
+consensus               A  T 
+sequence                     
+                             
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif 4 sites sorted by position p-value
+--------------------------------------------------------------------------------
+Sequence name             Start   P-value              Site
+-------------             ----- ---------            --------
+BIP_51                      116  1.14e-04 TCCCCCAGCC CCCACCCC ATCTTTGTCT
+BIP_49                      244  1.14e-04 ACGCCCGGCC CCCGCCCC CTCGGCTGGC
+BIP_46                      159  1.14e-04 CCGCCATTGG CCCGCCCC GCAGAGCGGC
+BIP_90                       48  1.14e-04 GGGAACACTC CCCGCCCC TCCCCCGCCC
+BIP_87                       71  1.14e-04 ACCCGCCGCC CCCGCCCC CACCTCCTAT
+BIP_85                       24  1.14e-04 CCACCGGCTT CCCACCCC TACCCAGTGG
+BIP_39                      240  1.14e-04 GCTGGCCAGC CCCGCCCC TCGAGGCGCG
+BIP_38                      112  1.14e-04 AACCTTCTGG CCCGCCCC TCGAGGCGCG
+BIP_37                       53  1.14e-04 AAAGCTAAGC CCCGCCCC TCATAAACTC
+BIP_80                       28  1.14e-04 CCTGAATGAC CCCGCCCC AGCACAGGAG
+BIP_33                      161  1.14e-04 TGGCATACGC CCCGCCCC GGAGCGCTGA
+BIP_32                       78  1.14e-04 TAAGCCTTGC CCCGCCCC GAGACGATTG
+BIP_75                      212  1.14e-04 CCCTCCCCCC CCCACCCC CCCCAACCCC
+BIP_30                       79  1.14e-04 GAACGGAAAG CCCGCCCC ATCGCCCTCC
+BIP_28                      187  1.14e-04 GCGGCGCCGC CCCGCCCC GAGTCCGCGG
+BIP_25                      156  1.14e-04 CCAAGCTCTC CCCACCCC CTGCTCCCTG
+BIP_71                      124  1.14e-04 CTTGGTTGGC CCCACCCC CAGGCTCTCT
+BIP_61                      193  1.14e-04 CGATGCCACC CCCACCCC AGCTTGGAGA
+BIP_13                       55  1.14e-04 CCCTCCCCTC CCCGCCCC GTGCGCCCCG
+BIP_8                        49  1.14e-04 CTCACCCCGC CCCACCCC CAGCGCTTTC
+BIP_7                       151  1.14e-04 CTCACCCCGC CCCACCCC CAGCGCTTTC
+BIP_60                      203  1.14e-04 AGAGTCTACT CCCACCCC TACCCCCCAC
+BIP_58                      225  1.14e-04 GAGTTCTGCC CCCACCCC CCAGCTCCAT
+BIP_53                      110  1.14e-04 CCACCCTTGT CCCACCCC CTGTCGGCTA
+BIP_2                        84  1.14e-04 CGCCCGCCAC CCCACCCC CCTCGGGGAT
+BIP_1                       204  1.14e-04 CGCCCGCCAC CCCACCCC CCTCGGGGAT
+BIP_100                     212  2.35e-04 ACACCGAGGC CCCGCCTC CCACGTGCGG
+BIP_99                      158  2.35e-04 TCTCCACTCC CCCTCCCC CACTCCTTCT
+BIP_89                      275  2.35e-04 AGGTGGCGCT CCCACCTC AGAATCTCAG
+BIP_86                       79  2.35e-04 GGCGGCGCTG CCCACCTC GAACCGCGCT
+BIP_77                      146  2.35e-04 TCCACGCAGA CCCGCCTC TCTTTAACAC
+BIP_18                      100  2.35e-04 CCTTTTCTTC CCCTCCCC CATTCTGGTC
+BIP_65                      208  2.35e-04 TAAGTTTAGC CCCACCTC CGTTGCTGGG
+BIP_63                      273  2.35e-04 TGTGCATGGT CCCTCCCC GGTGTTCCTG
+BIP_12                      195  2.35e-04 CTCCTTTTCC CCCGCCTC CATTTTGTTC
+BIP_59                      176  2.35e-04 GAGGGTGTGC CCCTCCCC CCACCAGCAA
+BIP_6                        73  2.35e-04 TTCAAAAGAG CCCGCCTC CAGGAGCTGG
+BIP_55                      138  2.35e-04 CCAAGTGTTC CCCTCCCC CCGCTCGGAA
+BIP_35                      207  2.65e-04 CCTTTTCCAT CCCTCCTC CTTCAACTCA
+BIP_57                       93  2.65e-04 GCATTTCCCG CCCTCCTC CGAGAGTCCG
+BIP_27                      139  3.41e-04 GGCGCGCGCC CCCGCTCC TGCCTGGCCT
+BIP_16                       88  3.41e-04 TAGCAACAGC CCCGCTCC CACCTGCTGC
+BIP_52                       96  4.16e-04 GAGGGAGGCG CCCGCCCT GAGGCGCGCC
+BIP_20                      130  4.16e-04 AAGAGCTGTG CCCGCCCT TACGCAGCGC
+BIP_68                      168  4.16e-04 CAGCCGAGGC CCCGCCCT CGCTGCCGGG
+BIP_97                      210  4.96e-04 GAGCTGGATT CCCGCTTC TGGGAGCTGC
+BIP_29                      113  4.96e-04 ACTCGGCGTT CCCGCTTC AGGGAGGTGG
+BIP_17                      112  4.96e-04 TAACTGCTGA CCCTCTCC CAGAATGCTC
+BIP_93                      117  6.53e-04 TATCAGGATG CCAACCCC TGAGAATGTT
+BIP_42                       91  6.53e-04 CCGCCGCTAC CCCGCCTT CCCAGCGCCC
+BIP_10                       25  6.53e-04 GAGCCGCCCC CCAGCCCC CCCATTCCTC
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif 4 block diagrams
+--------------------------------------------------------------------------------
+SEQUENCE NAME            POSITION P-VALUE  MOTIF DIAGRAM
+-------------            ----------------  -------------
+BIP_51                            0.00011  115_[+4]_177
+BIP_49                            0.00011  243_[+4]_49
+BIP_46                            0.00011  158_[+4]_134
+BIP_90                            0.00011  47_[+4]_245
+BIP_87                            0.00011  70_[+4]_222
+BIP_85                            0.00011  23_[+4]_269
+BIP_39                            0.00011  239_[+4]_53
+BIP_38                            0.00011  111_[+4]_181
+BIP_37                            0.00011  52_[+4]_240
+BIP_80                            0.00011  27_[+4]_265
+BIP_33                            0.00011  160_[+4]_132
+BIP_32                            0.00011  77_[+4]_215
+BIP_75                            0.00011  211_[+4]_81
+BIP_30                            0.00011  78_[+4]_214
+BIP_28                            0.00011  186_[+4]_106
+BIP_25                            0.00011  155_[+4]_137
+BIP_71                            0.00011  123_[+4]_169
+BIP_61                            0.00011  192_[+4]_100
+BIP_13                            0.00011  54_[+4]_238
+BIP_8                             0.00011  48_[+4]_244
+BIP_7                             0.00011  150_[+4]_142
+BIP_60                            0.00011  202_[+4]_90
+BIP_58                            0.00011  224_[+4]_68
+BIP_53                            0.00011  109_[+4]_183
+BIP_2                             0.00011  83_[+4]_209
+BIP_1                             0.00011  203_[+4]_89
+BIP_100                           0.00024  211_[+4]_81
+BIP_99                            0.00024  157_[+4]_135
+BIP_89                            0.00024  274_[+4]_18
+BIP_86                            0.00024  78_[+4]_214
+BIP_77                            0.00024  145_[+4]_147
+BIP_18                            0.00024  99_[+4]_193
+BIP_65                            0.00024  207_[+4]_85
+BIP_63                            0.00024  272_[+4]_20
+BIP_12                            0.00024  194_[+4]_98
+BIP_59                            0.00024  175_[+4]_117
+BIP_6                             0.00024  72_[+4]_220
+BIP_55                            0.00024  137_[+4]_155
+BIP_35                            0.00027  206_[+4]_86
+BIP_57                            0.00027  92_[+4]_200
+BIP_27                            0.00034  138_[+4]_154
+BIP_16                            0.00034  87_[+4]_205
+BIP_52                            0.00042  95_[+4]_197
+BIP_20                            0.00042  129_[+4]_163
+BIP_68                            0.00042  167_[+4]_125
+BIP_97                             0.0005  209_[+4]_83
+BIP_29                             0.0005  112_[+4]_180
+BIP_17                             0.0005  111_[+4]_181
+BIP_93                            0.00065  116_[+4]_176
+BIP_42                            0.00065  90_[+4]_202
+BIP_10                            0.00065  24_[+4]_268
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif 4 in BLOCKS format
+--------------------------------------------------------------------------------
+BL   MOTIF 4 width=8 seqs=51
+BIP_51                   (  116) CCCACCCC  1 
+BIP_49                   (  244) CCCGCCCC  1 
+BIP_46                   (  159) CCCGCCCC  1 
+BIP_90                   (   48) CCCGCCCC  1 
+BIP_87                   (   71) CCCGCCCC  1 
+BIP_85                   (   24) CCCACCCC  1 
+BIP_39                   (  240) CCCGCCCC  1 
+BIP_38                   (  112) CCCGCCCC  1 
+BIP_37                   (   53) CCCGCCCC  1 
+BIP_80                   (   28) CCCGCCCC  1 
+BIP_33                   (  161) CCCGCCCC  1 
+BIP_32                   (   78) CCCGCCCC  1 
+BIP_75                   (  212) CCCACCCC  1 
+BIP_30                   (   79) CCCGCCCC  1 
+BIP_28                   (  187) CCCGCCCC  1 
+BIP_25                   (  156) CCCACCCC  1 
+BIP_71                   (  124) CCCACCCC  1 
+BIP_61                   (  193) CCCACCCC  1 
+BIP_13                   (   55) CCCGCCCC  1 
+BIP_8                    (   49) CCCACCCC  1 
+BIP_7                    (  151) CCCACCCC  1 
+BIP_60                   (  203) CCCACCCC  1 
+BIP_58                   (  225) CCCACCCC  1 
+BIP_53                   (  110) CCCACCCC  1 
+BIP_2                    (   84) CCCACCCC  1 
+BIP_1                    (  204) CCCACCCC  1 
+BIP_100                  (  212) CCCGCCTC  1 
+BIP_99                   (  158) CCCTCCCC  1 
+BIP_89                   (  275) CCCACCTC  1 
+BIP_86                   (   79) CCCACCTC  1 
+BIP_77                   (  146) CCCGCCTC  1 
+BIP_18                   (  100) CCCTCCCC  1 
+BIP_65                   (  208) CCCACCTC  1 
+BIP_63                   (  273) CCCTCCCC  1 
+BIP_12                   (  195) CCCGCCTC  1 
+BIP_59                   (  176) CCCTCCCC  1 
+BIP_6                    (   73) CCCGCCTC  1 
+BIP_55                   (  138) CCCTCCCC  1 
+BIP_35                   (  207) CCCTCCTC  1 
+BIP_57                   (   93) CCCTCCTC  1 
+BIP_27                   (  139) CCCGCTCC  1 
+BIP_16                   (   88) CCCGCTCC  1 
+BIP_52                   (   96) CCCGCCCT  1 
+BIP_20                   (  130) CCCGCCCT  1 
+BIP_68                   (  168) CCCGCCCT  1 
+BIP_97                   (  210) CCCGCTTC  1 
+BIP_29                   (  113) CCCGCTTC  1 
+BIP_17                   (  112) CCCTCTCC  1 
+BIP_93                   (  117) CCAACCCC  1 
+BIP_42                   (   91) CCCGCCTT  1 
+BIP_10                   (   25) CCAGCCCC  1 
+//
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif 4 position-specific scoring matrix
+--------------------------------------------------------------------------------
+log-odds matrix: alength= 4 w= 8 n= 29886 bayes= 9.70357 E= 3.7e+004 
+ -1232    173  -1232  -1232 
+ -1232    173  -1232  -1232 
+  -239    167  -1232  -1232 
+    70  -1232     79    -34 
+ -1232    173  -1232  -1232 
+ -1232    158  -1232   -102 
+ -1232    134  -1232     24 
+ -1232    161  -1232   -134 
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif 4 position-specific probability matrix
+--------------------------------------------------------------------------------
+letter-probability matrix: alength= 4 w= 8 nsites= 51 E= 3.7e+004 
+ 0.000000  1.000000  0.000000  0.000000 
+ 0.000000  1.000000  0.000000  0.000000 
+ 0.039216  0.960784  0.000000  0.000000 
+ 0.333333  0.000000  0.509804  0.156863 
+ 0.000000  1.000000  0.000000  0.000000 
+ 0.000000  0.901961  0.000000  0.098039 
+ 0.000000  0.764706  0.000000  0.235294 
+ 0.000000  0.921569  0.000000  0.078431 
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif 4 regular expression
+--------------------------------------------------------------------------------
+CCC[GA]CC[CT]C
+--------------------------------------------------------------------------------
+
+
+
+
+Time 39.30 secs.
+
+********************************************************************************
+
+
+********************************************************************************
+MOTIF  5	width =    8   sites =  10   llr = 104   E-value = 7.6e+004
+********************************************************************************
+--------------------------------------------------------------------------------
+	Motif 5 Description
+--------------------------------------------------------------------------------
+Simplified        A  9a125aaa
+pos.-specific     C  ::::::::
+probability       G  :::85:::
+matrix            T  1:9:::::
+
+         bits    2.3  *   ***
+                 2.1  *   ***
+                 1.9 ***  ***
+                 1.6 ***  ***
+Relative         1.4 ***  ***
+Entropy          1.2 **** ***
+(15.0 bits)      0.9 ********
+                 0.7 ********
+                 0.5 ********
+                 0.2 ********
+                 0.0 --------
+
+Multilevel           AATGAAAA
+consensus               AG   
+sequence                     
+                             
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif 5 sites sorted by position p-value
+--------------------------------------------------------------------------------
+Sequence name             Start   P-value              Site
+-------------             ----- ---------            --------
+BIP_33                       74  4.34e-06 CTAGGAAGGC AATGAAAA CTTGGCTGGG
+BIP_6                       166  4.34e-06 TGTGTCGACC AATGAAAA GAAGGAACAG
+BIP_55                       10  4.34e-06  CCCTCGGCC AATGAAAA CCTGAGTGGC
+BIP_84                      266  1.06e-05 TGCCCAACGA AATGGAAA ACAAGAGTGA
+BIP_69                      228  1.06e-05 GTTGAGGAGC AATGGAAA TCAGACAGGG
+BIP_19                      228  1.06e-05 GTTGAGGAGC AATGGAAA TCAGACAGGG
+BIP_45                      165  1.79e-05 TTGACCTATG AATAGAAA TTCCTTCACA
+BIP_90                      207  1.79e-05 TTCTCCAGCC AATAGAAA CTAGGGAGGA
+BIP_71                       89  2.66e-05 GGTGGAGCTG TATGAAAA AGGGGCAGGG
+BIP_61                       12  2.66e-05 ACATGCAGAG AAAGAAAA TGACAGAGAT
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif 5 block diagrams
+--------------------------------------------------------------------------------
+SEQUENCE NAME            POSITION P-VALUE  MOTIF DIAGRAM
+-------------            ----------------  -------------
+BIP_33                            4.3e-06  73_[+5]_219
+BIP_6                             4.3e-06  165_[+5]_127
+BIP_55                            4.3e-06  9_[+5]_283
+BIP_84                            1.1e-05  265_[+5]_27
+BIP_69                            1.1e-05  227_[+5]_65
+BIP_19                            1.1e-05  227_[+5]_65
+BIP_45                            1.8e-05  164_[+5]_128
+BIP_90                            1.8e-05  206_[+5]_86
+BIP_71                            2.7e-05  88_[+5]_204
+BIP_61                            2.7e-05  11_[+5]_281
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif 5 in BLOCKS format
+--------------------------------------------------------------------------------
+BL   MOTIF 5 width=8 seqs=10
+BIP_33                   (   74) AATGAAAA  1 
+BIP_6                    (  166) AATGAAAA  1 
+BIP_55                   (   10) AATGAAAA  1 
+BIP_84                   (  266) AATGGAAA  1 
+BIP_69                   (  228) AATGGAAA  1 
+BIP_19                   (  228) AATGGAAA  1 
+BIP_45                   (  165) AATAGAAA  1 
+BIP_90                   (  207) AATAGAAA  1 
+BIP_71                   (   89) TATGAAAA  1 
+BIP_61                   (   12) AAAGAAAA  1 
+//
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif 5 position-specific scoring matrix
+--------------------------------------------------------------------------------
+log-odds matrix: alength= 4 w= 8 n= 29886 bayes= 10.9789 E= 7.6e+004 
+   213   -997   -997    -99 
+   228   -997   -997   -997 
+  -104   -997   -997    218 
+    -4   -997    144   -997 
+   128   -997     77   -997 
+   228   -997   -997   -997 
+   228   -997   -997   -997 
+   228   -997   -997   -997 
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif 5 position-specific probability matrix
+--------------------------------------------------------------------------------
+letter-probability matrix: alength= 4 w= 8 nsites= 10 E= 7.6e+004 
+ 0.900000  0.000000  0.000000  0.100000 
+ 1.000000  0.000000  0.000000  0.000000 
+ 0.100000  0.000000  0.000000  0.900000 
+ 0.200000  0.000000  0.800000  0.000000 
+ 0.500000  0.000000  0.500000  0.000000 
+ 1.000000  0.000000  0.000000  0.000000 
+ 1.000000  0.000000  0.000000  0.000000 
+ 1.000000  0.000000  0.000000  0.000000 
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif 5 regular expression
+--------------------------------------------------------------------------------
+AAT[GA][AG]AAA
+--------------------------------------------------------------------------------
+
+
+
+
+Time 48.82 secs.
+
+********************************************************************************
+
+
+********************************************************************************
+MOTIF  6	width =    8   sites =  13   llr = 130   E-value = 3.8e+004
+********************************************************************************
+--------------------------------------------------------------------------------
+	Motif 6 Description
+--------------------------------------------------------------------------------
+Simplified        A  :::::::a
+pos.-specific     C  8::a:aa:
+probability       G  ::3:::::
+matrix            T  2a7:a:::
+
+         bits    2.3  *  *  *
+                 2.1  *  *  *
+                 1.9  *  *  *
+                 1.6  * *****
+Relative         1.4  * *****
+Entropy          1.2 ********
+(14.5 bits)      0.9 ********
+                 0.7 ********
+                 0.5 ********
+                 0.2 ********
+                 0.0 --------
+
+Multilevel           CTTCTCCA
+consensus            T G     
+sequence                     
+                             
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif 6 sites sorted by position p-value
+--------------------------------------------------------------------------------
+Sequence name             Start   P-value              Site
+-------------             ----- ---------            --------
+BIP_51                      257  1.34e-05 GCTTCCAGCA CTTCTCCA CCATCTTCTT
+BIP_99                      146  1.34e-05 GAACCGCCGC CTTCTCCA CTCCCCCTCC
+BIP_45                      110  1.34e-05 CCATAGATGC CTTCTCCA GGTCACTTGA
+BIP_90                      196  1.34e-05 CTCACAGACC CTTCTCCA GCCAATAGAA
+BIP_62                      173  1.34e-05 CCTCGCTCTG CTTCTCCA CCCGCCGTGG
+BIP_55                       62  1.34e-05 AAGTGACAGG CTTCTCCA GAGCACGGGC
+BIP_100                     141  2.23e-05 CCTCAGCCTA TTTCTCCA CTTCCGGGAT
+BIP_79                       77  2.23e-05 CCTCAACTCC TTTCTCCA GCACTGACTA
+BIP_34                      217  2.23e-05 GAGTCTGACT TTTCTCCA GTGAAGGAAC
+BIP_75                       59  4.21e-05 GTGGAAACAA CTGCTCCA AAACACTGGC
+BIP_74                      128  4.21e-05 TACTGGGCCA CTGCTCCA GGCCTGCCTA
+BIP_17                      195  4.21e-05 CCAGGATGCT CTGCTCCA AAGGCCGACC
+BIP_3                       200  4.21e-05 GAGGCCCCGC CTGCTCCA CGGGTGGGGG
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif 6 block diagrams
+--------------------------------------------------------------------------------
+SEQUENCE NAME            POSITION P-VALUE  MOTIF DIAGRAM
+-------------            ----------------  -------------
+BIP_51                            1.3e-05  256_[+6]_36
+BIP_99                            1.3e-05  145_[+6]_147
+BIP_45                            1.3e-05  109_[+6]_183
+BIP_90                            1.3e-05  195_[+6]_97
+BIP_62                            1.3e-05  172_[+6]_120
+BIP_55                            1.3e-05  61_[+6]_231
+BIP_100                           2.2e-05  140_[+6]_152
+BIP_79                            2.2e-05  76_[+6]_216
+BIP_34                            2.2e-05  216_[+6]_76
+BIP_75                            4.2e-05  58_[+6]_234
+BIP_74                            4.2e-05  127_[+6]_165
+BIP_17                            4.2e-05  194_[+6]_98
+BIP_3                             4.2e-05  199_[+6]_93
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif 6 in BLOCKS format
+--------------------------------------------------------------------------------
+BL   MOTIF 6 width=8 seqs=13
+BIP_51                   (  257) CTTCTCCA  1 
+BIP_99                   (  146) CTTCTCCA  1 
+BIP_45                   (  110) CTTCTCCA  1 
+BIP_90                   (  196) CTTCTCCA  1 
+BIP_62                   (  173) CTTCTCCA  1 
+BIP_55                   (   62) CTTCTCCA  1 
+BIP_100                  (  141) TTTCTCCA  1 
+BIP_79                   (   77) TTTCTCCA  1 
+BIP_34                   (  217) TTTCTCCA  1 
+BIP_75                   (   59) CTGCTCCA  1 
+BIP_74                   (  128) CTGCTCCA  1 
+BIP_17                   (  195) CTGCTCCA  1 
+BIP_3                    (  200) CTGCTCCA  1 
+//
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif 6 position-specific scoring matrix
+--------------------------------------------------------------------------------
+log-odds matrix: alength= 4 w= 8 n= 29886 bayes= 10.9216 E= 3.8e+004 
+ -1035    135  -1035     22 
+ -1035  -1035  -1035    233 
+ -1035  -1035      7    180 
+ -1035    173  -1035  -1035 
+ -1035  -1035  -1035    233 
+ -1035    173  -1035  -1035 
+ -1035    173  -1035  -1035 
+   228  -1035  -1035  -1035 
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif 6 position-specific probability matrix
+--------------------------------------------------------------------------------
+letter-probability matrix: alength= 4 w= 8 nsites= 13 E= 3.8e+004 
+ 0.000000  0.769231  0.000000  0.230769 
+ 0.000000  0.000000  0.000000  1.000000 
+ 0.000000  0.000000  0.307692  0.692308 
+ 0.000000  1.000000  0.000000  0.000000 
+ 0.000000  0.000000  0.000000  1.000000 
+ 0.000000  1.000000  0.000000  0.000000 
+ 0.000000  1.000000  0.000000  0.000000 
+ 1.000000  0.000000  0.000000  0.000000 
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif 6 regular expression
+--------------------------------------------------------------------------------
+[CT]T[TG]CTCCA
+--------------------------------------------------------------------------------
+
+
+
+
+Time 58.36 secs.
+
+********************************************************************************
+
+
+********************************************************************************
+MOTIF  7	width =    8   sites =   2   llr = 24   E-value = 1.6e+005
+********************************************************************************
+--------------------------------------------------------------------------------
+	Motif 7 Description
+--------------------------------------------------------------------------------
+Simplified        A  ::::aa::
+pos.-specific     C  :::a::::
+probability       G  ::::::a:
+matrix            T  aaa::::a
+
+         bits    2.3 *** ** *
+                 2.1 *** ** *
+                 1.9 *** ****
+                 1.6 ********
+Relative         1.4 ********
+Entropy          1.2 ********
+(17.4 bits)      0.9 ********
+                 0.7 ********
+                 0.5 ********
+                 0.2 ********
+                 0.0 --------
+
+Multilevel           TTTCAAGT
+consensus                    
+sequence                     
+                             
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif 7 sites sorted by position p-value
+--------------------------------------------------------------------------------
+Sequence name             Start   P-value              Site
+-------------             ----- ---------            --------
+BIP_2                        48  5.85e-06 GCCGGAGCGG TTTCAAGT CTCCCCCGCC
+BIP_1                       168  5.85e-06 GCCGGAGCGG TTTCAAGT CTCCCCCGCC
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif 7 block diagrams
+--------------------------------------------------------------------------------
+SEQUENCE NAME            POSITION P-VALUE  MOTIF DIAGRAM
+-------------            ----------------  -------------
+BIP_2                             5.9e-06  47_[+7]_245
+BIP_1                             5.9e-06  167_[+7]_125
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif 7 in BLOCKS format
+--------------------------------------------------------------------------------
+BL   MOTIF 7 width=8 seqs=2
+BIP_2                    (   48) TTTCAAGT  1 
+BIP_1                    (  168) TTTCAAGT  1 
+//
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif 7 position-specific scoring matrix
+--------------------------------------------------------------------------------
+log-odds matrix: alength= 4 w= 8 n= 29886 bayes= 12.1013 E= 1.6e+005 
+  -765   -765   -765    233 
+  -765   -765   -765    233 
+  -765   -765   -765    233 
+  -765    172   -765   -765 
+   228   -765   -765   -765 
+   228   -765   -765   -765 
+  -765   -765    176   -765 
+  -765   -765   -765    233 
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif 7 position-specific probability matrix
+--------------------------------------------------------------------------------
+letter-probability matrix: alength= 4 w= 8 nsites= 2 E= 1.6e+005 
+ 0.000000  0.000000  0.000000  1.000000 
+ 0.000000  0.000000  0.000000  1.000000 
+ 0.000000  0.000000  0.000000  1.000000 
+ 0.000000  1.000000  0.000000  0.000000 
+ 1.000000  0.000000  0.000000  0.000000 
+ 1.000000  0.000000  0.000000  0.000000 
+ 0.000000  0.000000  1.000000  0.000000 
+ 0.000000  0.000000  0.000000  1.000000 
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif 7 regular expression
+--------------------------------------------------------------------------------
+TTTCAAGT
+--------------------------------------------------------------------------------
+
+
+
+
+Time 67.93 secs.
+
+********************************************************************************
+
+
+********************************************************************************
+MOTIF  8	width =    8   sites =   3   llr = 36   E-value = 8.8e+004
+********************************************************************************
+--------------------------------------------------------------------------------
+	Motif 8 Description
+--------------------------------------------------------------------------------
+Simplified        A  :::::a::
+pos.-specific     C  ::a:::::
+probability       G  ::::a:::
+matrix            T  aa:a::aa
+
+         bits    2.3 ** * ***
+                 2.1 ** * ***
+                 1.9 ** *****
+                 1.6 ********
+Relative         1.4 ********
+Entropy          1.2 ********
+(17.4 bits)      0.9 ********
+                 0.7 ********
+                 0.5 ********
+                 0.2 ********
+                 0.0 --------
+
+Multilevel           TTCTGATT
+consensus                    
+sequence                     
+                             
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif 8 sites sorted by position p-value
+--------------------------------------------------------------------------------
+Sequence name             Start   P-value              Site
+-------------             ----- ---------            --------
+BIP_73                       96  5.68e-06 CCTTTACTGT TTCTGATT TCTTGTAGAA
+BIP_26                      236  5.68e-06 TCTCTCCCAT TTCTGATT ATAGGCTGTT
+BIP_3                        29  5.68e-06 CCTCCTCTCA TTCTGATT TCCTATTGGG
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif 8 block diagrams
+--------------------------------------------------------------------------------
+SEQUENCE NAME            POSITION P-VALUE  MOTIF DIAGRAM
+-------------            ----------------  -------------
+BIP_73                            5.7e-06  95_[+8]_197
+BIP_26                            5.7e-06  235_[+8]_57
+BIP_3                             5.7e-06  28_[+8]_264
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif 8 in BLOCKS format
+--------------------------------------------------------------------------------
+BL   MOTIF 8 width=8 seqs=3
+BIP_73                   (   96) TTCTGATT  1 
+BIP_26                   (  236) TTCTGATT  1 
+BIP_3                    (   29) TTCTGATT  1 
+//
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif 8 position-specific scoring matrix
+--------------------------------------------------------------------------------
+log-odds matrix: alength= 4 w= 8 n= 29886 bayes= 12.0595 E= 8.8e+004 
+  -823   -823   -823    233 
+  -823   -823   -823    233 
+  -823    172   -823   -823 
+  -823   -823   -823    233 
+  -823   -823    176   -823 
+   228   -823   -823   -823 
+  -823   -823   -823    233 
+  -823   -823   -823    233 
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif 8 position-specific probability matrix
+--------------------------------------------------------------------------------
+letter-probability matrix: alength= 4 w= 8 nsites= 3 E= 8.8e+004 
+ 0.000000  0.000000  0.000000  1.000000 
+ 0.000000  0.000000  0.000000  1.000000 
+ 0.000000  1.000000  0.000000  0.000000 
+ 0.000000  0.000000  0.000000  1.000000 
+ 0.000000  0.000000  1.000000  0.000000 
+ 1.000000  0.000000  0.000000  0.000000 
+ 0.000000  0.000000  0.000000  1.000000 
+ 0.000000  0.000000  0.000000  1.000000 
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif 8 regular expression
+--------------------------------------------------------------------------------
+TTCTGATT
+--------------------------------------------------------------------------------
+
+
+
+
+Time 77.70 secs.
+
+********************************************************************************
+
+
+********************************************************************************
+MOTIF  9	width =    8   sites =  29   llr = 255   E-value = 4.1e+002
+********************************************************************************
+--------------------------------------------------------------------------------
+	Motif 9 Description
+--------------------------------------------------------------------------------
+Simplified        A  :5::4a::
+pos.-specific     C  7:::::::
+probability       G  ::aa6:aa
+matrix            T  35::::::
+
+         bits    2.3      *  
+                 2.1      *  
+                 1.9   ** ***
+                 1.6   ** ***
+Relative         1.4  *** ***
+Entropy          1.2  *** ***
+(12.7 bits)      0.9 ********
+                 0.7 ********
+                 0.5 ********
+                 0.2 ********
+                 0.0 --------
+
+Multilevel           CAGGGAGG
+consensus            TT  A   
+sequence                     
+                             
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif 9 sites sorted by position p-value
+--------------------------------------------------------------------------------
+Sequence name             Start   P-value              Site
+-------------             ----- ---------            --------
+BIP_51                      285  5.49e-05 GTCCACCGTG CAGGGAGG GTGCGGGC  
+BIP_50                      113  5.49e-05 GCGAAGGCCT CTGGGAGG CGGTTCGGGA
+BIP_86                      216  5.49e-05 GGGGGCGGGG CAGGGAGG AGCGGCACGA
+BIP_41                      109  5.49e-05 TCACTTCCGT CTGGGAGG GGCGTGGCCT
+BIP_79                      292  5.49e-05 AGCCTGGACA CAGGGAGG C         
+BIP_71                      289  5.49e-05 ACTCCCCCAA CTGGGAGG CAGT      
+BIP_16                      225  5.49e-05 CGCCTTCCCA CAGGGAGG AGGGGAGCTG
+BIP_8                       102  5.49e-05 CTGTACTCCT CAGGGAGG CGGAGGGCGG
+BIP_7                       204  5.49e-05 CTGTACTCCT CAGGGAGG CGGAGGGCGG
+BIP_59                      162  5.49e-05 AATAGCTCTT CAGGGAGG GTGTGCCCCT
+BIP_57                      142  5.49e-05 TCCTACACTG CAGGGAGG AGAGTCAGCG
+BIP_2                       239  5.49e-05 GGCCCAAGAT CTGGGAGG AGCGCGGGGG
+BIP_95                       92  9.32e-05 GCCAGATCCT CTGGAAGG CAGGATTAGC
+BIP_89                       17  9.32e-05 CTCCAGCGTC CTGGAAGG GACAAAACAT
+BIP_85                       77  9.32e-05 CTGAGGACTG CTGGAAGG ACCGGTGAGC
+BIP_4                        36  9.32e-05 GCGCGGGCAG CAGGAAGG CCGTGGCAGG
+BIP_55                       87  9.32e-05 GGCCAATCTC CAGGAAGG ACGCTCGCCT
+BIP_54                       69  9.32e-05 TCCCTCGGGT CTGGAAGG CGCCGCGGGC
+BIP_53                      245  9.32e-05 ATTTAGCGGC CTGGAAGG CCACGCCCCA
+BIP_43                      206  1.29e-04 AGACCAGACC TTGGGAGG CCAAGCACAG
+BIP_90                      216  1.29e-04 CAATAGAAAC TAGGGAGG ATGTAGTGGG
+BIP_29                      192  1.29e-04 GGCGGGGCTG TAGGGAGG CTGCGTCACT
+BIP_69                      158  1.29e-04 CACTGGGTGT TTGGGAGG TCAGGAGGGA
+BIP_19                      158  1.29e-04 CACTGGGTGT TTGGGAGG TCAGGAGGGA
+BIP_63                      202  1.29e-04 TTACTGTACG TTGGGAGG GAGAGAGACA
+BIP_102                     214  1.55e-04 GTAGTGGCGG TTGGAAGG CGTTGGCCAT
+BIP_33                       65  1.55e-04 GGCACCTAGC TAGGAAGG CAATGAAAAC
+BIP_76                      177  1.55e-04 GGGTGGGGCG TAGGAAGG ATGGGGACAG
+BIP_18                      265  1.55e-04 CCTCCTAGCC TAGGAAGG AGCACGTGGT
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif 9 block diagrams
+--------------------------------------------------------------------------------
+SEQUENCE NAME            POSITION P-VALUE  MOTIF DIAGRAM
+-------------            ----------------  -------------
+BIP_51                            5.5e-05  284_[+9]_8
+BIP_50                            5.5e-05  112_[+9]_180
+BIP_86                            5.5e-05  215_[+9]_77
+BIP_41                            5.5e-05  108_[+9]_184
+BIP_79                            5.5e-05  291_[+9]_1
+BIP_71                            5.5e-05  288_[+9]_4
+BIP_16                            5.5e-05  224_[+9]_68
+BIP_8                             5.5e-05  101_[+9]_191
+BIP_7                             5.5e-05  203_[+9]_89
+BIP_59                            5.5e-05  161_[+9]_131
+BIP_57                            5.5e-05  141_[+9]_151
+BIP_2                             5.5e-05  238_[+9]_54
+BIP_95                            9.3e-05  91_[+9]_201
+BIP_89                            9.3e-05  16_[+9]_276
+BIP_85                            9.3e-05  76_[+9]_216
+BIP_4                             9.3e-05  35_[+9]_257
+BIP_55                            9.3e-05  86_[+9]_206
+BIP_54                            9.3e-05  68_[+9]_224
+BIP_53                            9.3e-05  244_[+9]_48
+BIP_43                            0.00013  205_[+9]_87
+BIP_90                            0.00013  215_[+9]_77
+BIP_29                            0.00013  191_[+9]_101
+BIP_69                            0.00013  157_[+9]_135
+BIP_19                            0.00013  157_[+9]_135
+BIP_63                            0.00013  201_[+9]_91
+BIP_102                           0.00015  213_[+9]_79
+BIP_33                            0.00015  64_[+9]_228
+BIP_76                            0.00015  176_[+9]_116
+BIP_18                            0.00015  264_[+9]_28
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif 9 in BLOCKS format
+--------------------------------------------------------------------------------
+BL   MOTIF 9 width=8 seqs=29
+BIP_51                   (  285) CAGGGAGG  1 
+BIP_50                   (  113) CTGGGAGG  1 
+BIP_86                   (  216) CAGGGAGG  1 
+BIP_41                   (  109) CTGGGAGG  1 
+BIP_79                   (  292) CAGGGAGG  1 
+BIP_71                   (  289) CTGGGAGG  1 
+BIP_16                   (  225) CAGGGAGG  1 
+BIP_8                    (  102) CAGGGAGG  1 
+BIP_7                    (  204) CAGGGAGG  1 
+BIP_59                   (  162) CAGGGAGG  1 
+BIP_57                   (  142) CAGGGAGG  1 
+BIP_2                    (  239) CTGGGAGG  1 
+BIP_95                   (   92) CTGGAAGG  1 
+BIP_89                   (   17) CTGGAAGG  1 
+BIP_85                   (   77) CTGGAAGG  1 
+BIP_4                    (   36) CAGGAAGG  1 
+BIP_55                   (   87) CAGGAAGG  1 
+BIP_54                   (   69) CTGGAAGG  1 
+BIP_53                   (  245) CTGGAAGG  1 
+BIP_43                   (  206) TTGGGAGG  1 
+BIP_90                   (  216) TAGGGAGG  1 
+BIP_29                   (  192) TAGGGAGG  1 
+BIP_69                   (  158) TTGGGAGG  1 
+BIP_19                   (  158) TTGGGAGG  1 
+BIP_63                   (  202) TTGGGAGG  1 
+BIP_102                  (  214) TTGGAAGG  1 
+BIP_33                   (   65) TAGGAAGG  1 
+BIP_76                   (  177) TAGGAAGG  1 
+BIP_18                   (  265) TAGGAAGG  1 
+//
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif 9 position-specific scoring matrix
+--------------------------------------------------------------------------------
+log-odds matrix: alength= 4 w= 8 n= 29886 bayes= 11.2578 E= 4.1e+002 
+ -1150    112  -1150     80 
+   133  -1150  -1150    128 
+ -1150  -1150    177  -1150 
+ -1150  -1150    177  -1150 
+    89  -1150    108  -1150 
+   228  -1150  -1150  -1150 
+ -1150  -1150    177  -1150 
+ -1150  -1150    177  -1150 
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif 9 position-specific probability matrix
+--------------------------------------------------------------------------------
+letter-probability matrix: alength= 4 w= 8 nsites= 29 E= 4.1e+002 
+ 0.000000  0.655172  0.000000  0.344828 
+ 0.517241  0.000000  0.000000  0.482759 
+ 0.000000  0.000000  1.000000  0.000000 
+ 0.000000  0.000000  1.000000  0.000000 
+ 0.379310  0.000000  0.620690  0.000000 
+ 1.000000  0.000000  0.000000  0.000000 
+ 0.000000  0.000000  1.000000  0.000000 
+ 0.000000  0.000000  1.000000  0.000000 
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif 9 regular expression
+--------------------------------------------------------------------------------
+[CT][AT]GG[GA]AGG
+--------------------------------------------------------------------------------
+
+
+
+
+Time 87.21 secs.
+
+********************************************************************************
+
+
+********************************************************************************
+MOTIF 10	width =    8   sites =   3   llr = 36   E-value = 3.3e+004
+********************************************************************************
+--------------------------------------------------------------------------------
+	Motif 10 Description
+--------------------------------------------------------------------------------
+Simplified        A  ::::::::
+pos.-specific     C  ::::::::
+probability       G  ::a:::a:
+matrix            T  aa:aaa:a
+
+         bits    2.3 ** *** *
+                 2.1 ** *** *
+                 1.9 ********
+                 1.6 ********
+Relative         1.4 ********
+Entropy          1.2 ********
+(17.5 bits)      0.9 ********
+                 0.7 ********
+                 0.5 ********
+                 0.2 ********
+                 0.0 --------
+
+Multilevel           TTGTTTGT
+consensus                    
+sequence                     
+                             
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif 10 sites sorted by position p-value
+--------------------------------------------------------------------------------
+Sequence name             Start   P-value              Site
+-------------             ----- ---------            --------
+BIP_83                        3  5.37e-06         GG TTGTTTGT CAACAACCTT
+BIP_36                      234  5.37e-06 TAAGGCCGAA TTGTTTGT TCTGTGATTG
+BIP_10                       43  5.37e-06 CCCATTCCTC TTGTTTGT CTCCAAGTCC
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif 10 block diagrams
+--------------------------------------------------------------------------------
+SEQUENCE NAME            POSITION P-VALUE  MOTIF DIAGRAM
+-------------            ----------------  -------------
+BIP_83                            5.4e-06  2_[+10]_290
+BIP_36                            5.4e-06  233_[+10]_59
+BIP_10                            5.4e-06  42_[+10]_250
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif 10 in BLOCKS format
+--------------------------------------------------------------------------------
+BL   MOTIF 10 width=8 seqs=3
+BIP_83                   (    3) TTGTTTGT  1 
+BIP_36                   (  234) TTGTTTGT  1 
+BIP_10                   (   43) TTGTTTGT  1 
+//
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif 10 position-specific scoring matrix
+--------------------------------------------------------------------------------
+log-odds matrix: alength= 4 w= 8 n= 29886 bayes= 12.0595 E= 3.3e+004 
+  -823   -823   -823    233 
+  -823   -823   -823    233 
+  -823   -823    176   -823 
+  -823   -823   -823    233 
+  -823   -823   -823    233 
+  -823   -823   -823    233 
+  -823   -823    176   -823 
+  -823   -823   -823    233 
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif 10 position-specific probability matrix
+--------------------------------------------------------------------------------
+letter-probability matrix: alength= 4 w= 8 nsites= 3 E= 3.3e+004 
+ 0.000000  0.000000  0.000000  1.000000 
+ 0.000000  0.000000  0.000000  1.000000 
+ 0.000000  0.000000  1.000000  0.000000 
+ 0.000000  0.000000  0.000000  1.000000 
+ 0.000000  0.000000  0.000000  1.000000 
+ 0.000000  0.000000  0.000000  1.000000 
+ 0.000000  0.000000  1.000000  0.000000 
+ 0.000000  0.000000  0.000000  1.000000 
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif 10 regular expression
+--------------------------------------------------------------------------------
+TTGTTTGT
+--------------------------------------------------------------------------------
+
+
+
+
+Time 96.67 secs.
+
+********************************************************************************
+
+
+********************************************************************************
+SUMMARY OF MOTIFS
+********************************************************************************
+
+--------------------------------------------------------------------------------
+	Combined block diagrams: non-overlapping sites with p-value < 0.0001
+--------------------------------------------------------------------------------
+SEQUENCE NAME            COMBINED P-VALUE  MOTIF DIAGRAM
+-------------            ----------------  -------------
+BIP_1                            6.37e-03  167_[+7(5.85e-06)]_58_[+5(5.82e-05)]_59
+BIP_2                            4.80e-04  47_[+7(5.85e-06)]_58_[+5(5.82e-05)]_117_[+9(5.49e-05)]_29_[+10(3.11e-05)]_17
+BIP_3                            1.08e-03  28_[+8(5.68e-06)]_163_[+6(4.21e-05)]_58_[+2(5.28e-05)]_27
+BIP_53                           5.50e-01  244_[+9(9.32e-05)]_48
+BIP_54                           6.31e-01  68_[+9(9.32e-05)]_224
+BIP_55                           7.60e-04  9_[+5(4.34e-06)]_44_[+6(1.34e-05)]_17_[+9(9.32e-05)]_206
+BIP_56                           1.89e-02  76_[+2(3.11e-05)]_136_[+3(7.59e-06)]_72
+BIP_4                            6.56e-01  35_[+9(9.32e-05)]_257
+BIP_57                           5.86e-02  141_[+9(5.49e-05)]_151
+BIP_5                            6.00e-02  280_[+3(3.84e-06)]_12
+BIP_58                           2.92e-02  300
+BIP_6                            6.09e-02  165_[+5(4.34e-06)]_127
+BIP_59                           1.78e-04  79_[+5(4.51e-05)]_[+5(4.51e-05)]_[+5(4.51e-05)]_[+5(4.51e-05)]_[+1(4.35e-05)]_25_[+1(1.39e-05)]_9_[+9(5.49e-05)]_22_[+2(8.07e-05)]_101
+BIP_60                           8.93e-04  232_[+3(3.84e-06)]_60
+BIP_7                            2.71e-01  203_[+9(5.49e-05)]_89
+BIP_8                            1.53e-01  101_[+9(5.49e-05)]_191
+BIP_9                            1.55e-01  257_[+3(2.31e-05)]_35
+BIP_10                           1.08e-03  42_[+10(5.37e-06)]_250
+BIP_11                           7.69e-03  46_[+5(3.91e-05)]_246
+BIP_12                           3.19e-02  203_[+3(7.59e-06)]_89
+BIP_13                           9.29e-01  300
+BIP_61                           1.91e-02  11_[+5(2.66e-05)]_9_[+7(3.34e-05)]_264
+BIP_62                           3.90e-02  172_[+6(1.34e-05)]_120
+BIP_14                           9.99e-01  300
+BIP_15                           9.98e-01  300
+BIP_63                           6.68e-05  186_[+2(1.28e-05)]_24_[+3(3.84e-06)]_21_[+1(4.35e-05)]_45
+BIP_64                           2.02e-04  14_[+3(1.34e-05)]_131_[+1(2.30e-05)]_139
+BIP_65                           1.21e-03  188_[+2(1.28e-05)]_104
+BIP_66                           3.32e-01  300
+BIP_16                           9.58e-03  224_[+9(5.49e-05)]_68
+BIP_17                           2.72e-02  82_[+7(3.34e-05)]_104_[+6(4.21e-05)]_98
+BIP_18                           4.38e-02  300
+BIP_67                           1.39e-02  2_[+10(3.11e-05)]_64_[+1(1.39e-05)]_13_[+1(4.35e-05)]_98_[+10(3.11e-05)]_91
+BIP_68                           7.44e-01  300
+BIP_19                           1.40e-03  141_[+1(6.72e-05)]_64_[+2(3.11e-05)]_6_[+5(1.06e-05)]_65
+BIP_69                           1.40e-03  141_[+1(6.72e-05)]_64_[+2(3.11e-05)]_6_[+5(1.06e-05)]_65
+BIP_70                           8.36e-03  41_[+2(9.82e-05)]_15_[+1(1.39e-05)]_228
+BIP_20                           3.90e-01  300
+BIP_21                           3.83e-01  300
+BIP_22                           3.55e-01  300
+BIP_23                           7.16e-01  300
+BIP_71                           3.01e-03  88_[+5(2.66e-05)]_62_[+2(4.00e-05)]_122_[+9(5.49e-05)]_4
+BIP_24                           1.90e-01  164_[+2(3.11e-05)]_128
+BIP_25                           8.30e-01  300
+BIP_72                           3.67e-02  190_[+1(4.35e-05)]_5_[+1(1.39e-05)]_89
+BIP_26                           7.42e-04  235_[+8(5.68e-06)]_21_[+3(2.31e-05)]_28
+BIP_27                           2.85e-03  207_[+1(1.39e-05)]_53_[+3(1.34e-05)]_24
+BIP_73                           7.06e-02  95_[+8(5.68e-06)]_197
+BIP_74                           3.59e-03  127_[+6(4.21e-05)]_42_[+2(5.28e-05)]_1_[+1(2.30e-05)]_106
+BIP_28                           3.73e-01  300
+BIP_29                           5.41e-01  119_[+9(5.49e-05)]_173
+BIP_30                           5.73e-01  300
+BIP_75                           3.96e-05  58_[+6(4.21e-05)]_51_[+8(3.24e-05)]_107_[+2(1.28e-05)]_60
+BIP_31                           9.89e-01  300
+BIP_76                           4.91e-02  21_[+3(3.46e-05)]_271
+BIP_32                           4.13e-01  148_[+3(5.38e-05)]_144
+BIP_77                           5.97e-02  300
+BIP_33                           1.54e-02  73_[+5(4.34e-06)]_41_[+5(6.74e-05)]_170
+BIP_78                           8.27e-02  176_[+7(3.34e-05)]_116
+BIP_34                           2.25e-02  156_[+1(4.35e-05)]_52_[+6(2.23e-05)]_76
+BIP_79                           3.45e-03  76_[+6(2.23e-05)]_71_[+1(4.35e-05)]_4_[+2(5.28e-05)]_116_[+9(5.49e-05)]_1
+BIP_80                           9.25e-04  118_[+1(2.30e-05)]_4_[+2(3.11e-05)]_162
+BIP_35                           1.76e-01  300
+BIP_36                           4.34e-02  233_[+10(5.37e-06)]_59
+BIP_37                           4.27e-01  300
+BIP_38                           1.33e-01  43_[+1(8.07e-05)]_109_[+1(1.39e-05)]_132
+BIP_39                           2.52e-01  44_[+1(1.39e-05)]_207_[+1(8.07e-05)]_33
+BIP_81                           9.81e-02  76_[+5(4.51e-05)]_216
+BIP_40                           3.46e-01  290_[+6(4.21e-05)]_2
+BIP_82                           5.50e-01  300
+BIP_83                           6.76e-02  2_[+10(5.37e-06)]_135_[+1(5.29e-05)]_147
+BIP_41                           4.17e-01  108_[+9(5.49e-05)]_184
+BIP_42                           8.93e-01  300
+BIP_84                           2.05e-03  172_[+2(1.28e-05)]_85_[+5(1.06e-05)]_27
+BIP_85                           7.27e-01  76_[+9(9.32e-05)]_216
+BIP_86                           4.75e-01  215_[+9(5.49e-05)]_77
+BIP_87                           2.58e-02  108_[+3(2.69e-05)]_184
+BIP_88                           8.34e-04  98_[+2(1.28e-05)]_23_[+1(1.39e-05)]_144_[+3(8.46e-05)]_11
+BIP_89                           1.21e-01  16_[+9(9.32e-05)]_276
+BIP_90                           1.23e-04  12_[+2(7.44e-05)]_175_[+6(1.34e-05)]_3_[+5(1.79e-05)]_86
+BIP_91                           2.13e-01  120_[+2(8.07e-05)]_14_[+2(1.28e-05)]_11_[+2(1.28e-05)]_131
+BIP_43                           2.99e-01  30_[+1(4.35e-05)]_262
+BIP_92                           1.13e-02  102_[+1(2.30e-05)]_55_[+1(1.39e-05)]_127
+BIP_93                           6.43e-02  153_[+2(3.11e-05)]_5_[+2(8.96e-05)]_126
+BIP_94                           1.29e-03  119_[+7(3.34e-05)]_26_[+2(7.44e-05)]_70_[+2(7.44e-05)]_61
+BIP_95                           9.92e-02  91_[+9(9.32e-05)]_7_[+2(7.44e-05)]_35_[+2(1.28e-05)]_39_[+2(5.28e-05)]_96
+BIP_44                           8.73e-01  300
+BIP_45                           1.09e-04  9_[+7(3.34e-05)]_92_[+6(1.34e-05)]_12_[+7(5.85e-06)]_27_[+5(1.79e-05)]_128
+BIP_46                           6.72e-01  300
+BIP_47                           9.97e-01  300
+BIP_96                           3.31e-02  300
+BIP_97                           1.04e-03  103_[+3(3.46e-05)]_20_[+2(8.96e-05)]_146_[+7(7.88e-05)]_7
+BIP_98                           1.86e-02  217_[+1(5.29e-05)]_3_[+2(4.00e-05)]_64
+BIP_99                           8.62e-02  145_[+6(1.34e-05)]_147
+BIP_48                           6.85e-01  300
+BIP_49                           1.13e-02  123_[+2(8.96e-05)]_134_[+3(2.31e-05)]_27
+BIP_50                           2.25e-01  112_[+9(5.49e-05)]_180
+BIP_100                          1.05e-01  140_[+6(2.23e-05)]_152
+BIP_51                           1.20e-04  158_[+1(1.39e-05)]_90_[+6(1.34e-05)]_2_[+3(1.34e-05)]_10_[+9(5.49e-05)]_8
+BIP_52                           8.79e-01  300
+BIP_101                          2.07e-01  85_[+1(2.30e-05)]_207
+BIP_102                          1.86e-01  300
+--------------------------------------------------------------------------------
+
+********************************************************************************
+
+
+********************************************************************************
+Stopped because nmotifs = 10 reached.
+********************************************************************************
+
+CPU: pem605-116
+
+********************************************************************************
